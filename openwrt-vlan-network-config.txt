@@ -1,0 +1,17 @@
+# /etc/config/network
+# OpenWRT router (physical or virtual) is behind a Telekom Glasfaser Modem 2
+
+config interface 'WAN'
+	option proto 'pppoe'
+	option ipv6 'auto'
+	option device 'eth1.7'
+	option username '1und1/uixxxx-xxx@online.de'
+	option password 'xxxxxxxx'
+	option metric '1'
+
+config device
+	option type '8021q'
+	option ifname 'eth1'
+	option vid '7'
+	option name 'eth1.7'
+  
